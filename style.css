@@ -1,0 +1,63 @@
+* {
+  font-size: 60px;
+}
+body {
+  font-family: "Playwrite GB S", cursive;
+  background-image: url("image.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div a {
+  color: rgb(182, 75, 21);
+  text-decoration: dotted;
+  margin: 12vw;
+  text-shadow: 2px 5px 5px black;
+}
+
+h1 {
+  color: #096538;
+  text-shadow: 5px 5px 5px black;
+}
+h2 {
+  color: #2f9e79;
+  text-shadow: 2px 3px 5px black;
+}
+h3 {
+  font-size: 30px;
+  color: #2f9e79;
+  text-shadow: 2px 3px 5px black;
+  border: solid;
+  width: 70vw;
+  border-width: 5px;
+  border-radius: 5vw;
+  border-color: rgba(73, 70, 70, 0.586);
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type="text"] {
+  border-radius: 2vw;
+  box-shadow: 5px 6px 10px black;
+  border-color: rgb(4, 149, 101);
+}
+
+.btn {
+  width: 20vw;
+  color: rgb(28, 36, 1);
+  border-radius: 2vw;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+
+input[type="checkbox"] {
+  width: 2%;
+  height: 0.5rem;
+}
+span {
+  color: #2f9e79;
+}

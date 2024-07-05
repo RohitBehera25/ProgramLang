@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Language App</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <center>
+      <div>
+        <a href="index.html"> Home </a>
+        <a href="about.html"> About Us </a>
+      </div>
+      <h1>Language You Know App</h1>
+      <form onsubmit="show()">
+        <input
+          type="text"
+          placeholder="Enter Your Name"
+          id="name"
+          class="btn1"
+        />
+        <br /><br />
+        <label></label>
+        <input type="checkbox" id="js" /><span>JavaScript</span>
+        <input type="checkbox" id="ja" /><span>Java</span>
+        <input type="checkbox" id="py" /><span>Python</span> <br /><br />
+        <input type="submit" class="btn" />
+      </form>
+      <h2 id="msg"></h2>
+
+      <script>
+        function show() {
+          event.preventDefault();
+          let name = document.getElementById("name");
+          let js = document.getElementById("js");
+          let ja = document.getElementById("ja");
+          let py = document.getElementById("py");
+
+          if (name.value == "") {
+            alert("Please Enter Name");
+            name.focus();
+            return;
+          }
+
+          let choice = "";
+          if (js.checked) choice += "JavaScript";
+          if (ja.checked) choice += "Java";
+          if (py.checked) choice += "Python";
+
+          if (choice.length == 0) choice = "Then Learn Something";
+
+          localStorage.setItem("name", name.value);
+          localStorage.setItem("choice", choice);
+          localStorage.setItem("js", js);
+          localStorage.setItem("ja", ja);
+          localStorage.setItem("py", py);
+
+          window.location.href = "result.html";
+        }
+      </script>
+    </center>
+  </body>
+</html>
